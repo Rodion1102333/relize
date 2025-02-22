@@ -1,0 +1,472 @@
+/* Общие стили */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #ffffff ;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Навигационный бар */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -2%;
+  width: 103%;
+  background: #1a1a1a;
+  padding: 10px 30px;
+  border-bottom: 2px solid #ff0077;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Кнопка с тремя точками */
+.menu-toggle {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: block; /* Убедимся, что кнопка с тремя точками отображается */
+  z-index: 20; /* Обеспечиваем, что она будет сверху */
+  position: relative;
+  margin-left: auto;
+}
+
+/* Стиль для кнопки с тремя точками */
+#menu-toggle {
+  font-size: 3.5rem; /* Размер шрифта для точек */
+  color: #fff; /* Белый цвет текста */
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  position: fixed; /* Фиксируем кнопку в правом верхнем углу */
+  top: -10px; /* Уменьшили отступ от верхнего края, чтобы кнопка была выше */
+  right: 7px; /* Отступ от правого края */
+  z-index: 1000; /* Убедимся, что кнопка будет выше других элементов */
+}
+
+/* Эффект при наведении на кнопку */
+#menu-toggle:hover {
+  transform: scale(1.2); /* Увеличение при наведении */
+  color: #ff0077; /* Розовый цвет */
+}
+
+/* Начальное состояние меню */
+#nav-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  display: flex; /* Гибкая разметка */
+  flex-direction: column; /* Вертикальное меню */
+  justify-content: center; /* Центрируем по вертикали */
+  align-items: center; /* Центрируем по горизонтали */
+  position: absolute;
+  top: 50px;
+  right: 2vw; /* Используем процент от ширины экрана для адаптивности */
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Когда меню открыто */
+#nav-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Стили для элементов меню */
+#nav-menu li {
+  margin: 10px 0; /* Отступы между пунктами */
+  display: flex; /* Гибкая разметка для пунктов */
+  justify-content: center; /* Центрируем текст по горизонтали */
+  align-items: center; /* Центрируем текст по вертикали */
+}
+
+#nav-menu li a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#nav-menu li a:hover {
+  color: #ff0077;
+  text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+}
+
+/* Заголовок в навигации */
+.header-title h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px #ff0077;
+  text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  margin: 0;
+  margin-left: 2rem;
+}
+
+/* Мерцание */
+.flicker {
+  animation: flicker 1s ease-in-out 3; /* 3 секунды мерцания */
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  }
+  5% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+  10% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  }
+  15% {
+    opacity: 0.2;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  }
+  30% {
+    opacity: 0.1;
+    text-shadow: none;
+  }
+  40% {
+    opacity: 0.5;
+    text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  }
+  50% {
+    opacity: 0.2;
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+  }
+}
+
+/* Стабильный текст */
+.steady {
+  opacity: 1;
+  text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+}
+
+/* Кнопки навигации */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Сдвиг влево */
+}
+
+/* Стили для элементов меню */
+.navbar ul li {
+  margin: 10px 0;
+}
+
+/* Навигационные ссылки */
+.navbar ul li a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект свечения на кнопках при наведении */
+.navbar ul li a:hover {
+  color: #ff0077;
+  text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+}
+
+/* Эффект свечения на навигационном баре */
+.navbar:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 119, 0.6), 0 0 30px rgba(255, 136, 204, 0.4);
+}
+
+/* Стили для скрытого меню на мобильных устройствах */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Скрываем обычное меню */
+  }
+
+  .menu-toggle {
+    display: block; /* Отображаем кнопку с тремя точками */
+  }
+}
+
+/* Фон с анимацией градиента */
+#main-content {
+  padding: 20px;
+  transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 143%;
+  background: linear-gradient(45deg, #ff0077, #ff4e7f, #ff77a9, #2a1f2f, #4b2a49);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Прелоадер */
+#preloader {
+  position: fixed; /* Фиксируем позицию на экране */
+  top: 0;
+  left: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  display: flex; /* Используем Flexbox */
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  background: #0d0d0d; /* Фон загрузочного экрана */
+  z-index: 9999; /* Поверх всего контента */
+  transition: opacity 1s ease; /* Плавное исчезновение */
+}
+
+.neon-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d0d0d;
+  transition: opacity 1s ease;
+}
+
+.neon-text {
+  display: flex;
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.neon-text span {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  color: transparent;
+  -webkit-text-stroke: 2px #ff0077;
+  text-shadow: none;
+  transition: text-shadow 1s ease-in-out, color 1s ease-in-out;
+}
+
+.neon-text span.active {
+  text-shadow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
+}
+
+/* Иконки навигации */
+.navbar ul li a i {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Эффект на иконки при наведении */
+.navbar ul li a:hover i {
+  transform: scale(1.2);
+}
+
+/* Нижний бордер */
+.footer-border {
+  position: fixed;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  background: #0d0d0d; /* Цвет фона бордера */
+  color: #ff0077; /* Неоновый розовый цвет текста */
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid #ff0077; /* Верхняя линия бордера */
+  font-family: 'Orbitron', sans-serif; /* Современный шрифт */
+  font-size: 14px;
+  z-index: 10;
+  transition: box-shadow 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход */
+}
+
+/* Эффект при наведении */
+.footer-border:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 119, 0.8), 0 0 30px rgba(255, 0, 119, 0.6); /* Чисто розовый ореол */
+  border-top-color: rgba(255, 0, 119, 1); /* Подсветка верхней линии */
+}
+
+.footer-border:hover p {
+  color: #ff4e7f; /* Более яркий розовый цвет текста */
+  text-shadow: 0 0 10px rgba(255, 0, 119, 0.8), 0 0 20px rgba(255, 0, 119, 0.6); /* Чисто розовый ореол для текста */
+}
+
+/* Центрированное изображение */
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2rem;
+  margin-left: 15rem;
+}
+
+.centered-image img {
+  width: 600px; /* Устанавливает размер изображения */
+  height: auto; /* Сохраняет пропорции */
+  /* Можете добавить границу или другие стили */
+}
+
+/* Контейнер для контента */
+.content-wrapper {
+  display: flex;
+  justify-content: flex-start; /* Сдвигаем влево */
+  align-items: center; /* Центрируем по вертикали */
+  height: 95vh; /* Занимает всю высоту экрана */
+  padding-left: 15rem; /* Уменьшаем отступ слева, чтобы текст был ближе к центру */
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Текстовый блок */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Сдвигаем влево */
+  text-align: left;
+  margin-top: -10rem; /* Отступ сверху */
+  margin-left: 11rem;
+}
+
+/* Приветствие */
+.greeting {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+/* 3D текст */
+.text3d-wrap-1 {
+  margin: 1rem 0;
+  perspective: 1000px;
+}
+
+.text3d-1 {
+  display: inline-block;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: #f5f5f5;
+  transform: rotateX(30deg);
+  text-shadow:
+    0 1px 0 #9c9c9c,
+    0 2px 0 #9c9c9c,
+    0 3px 0 rgba(16, 16, 16, 0.8),
+    0 4px 5px rgba(16, 16, 16, 0.6);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text3d-wrap-1:hover .text3d-1 {
+  transform: rotateX(0deg);
+  text-shadow:
+    0 1px 1px #9c9c9c,
+    0 3px 3px rgba(16, 16, 16, 0.6),
+    0 6px 5px rgba(16, 16, 16, 0.4);
+}
+
+/* Подзаголовок */
+.sub-title {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  margin: 1rem 0;
+}
+
+/* Описание */
+.description {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* Центрированное изображение */
+.centered-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрируем картинку */
+}
+
+/* Контейнер для кнопок */
+.buttons-container {
+  display: flex;
+  justify-content: flex-start; /* Кнопки слева */
+  gap: 20px; /* Отступ между кнопками */
+  margin-top: 1.5rem; /* Отступ сверху */
+}
+
+/* Стиль кнопок */
+.btn {
+  background-color: #ff0077; /* Розовый цвет */
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff4e7f; /* Более светлый розовый на ховер */
+  transform: scale(1.1); /* Увеличение кнопки при наведении */
+  box-shadow: 0 0 10px 2px rgba(255, 0, 119, 0.4); /* Меньший розовый ореол */
+}
+
+.btn:active {
+  transform: scale(0.95); /* Уменьшение кнопки при клике */
+}

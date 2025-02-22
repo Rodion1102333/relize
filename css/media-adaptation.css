@@ -1,0 +1,453 @@
+@media (max-width: 1628px) {
+.text-container {
+ margin-left: 3rem;
+}
+.centered-image {
+margin-left: 20rem;
+}
+}
+
+@media (max-width: 1621px) {
+.text-container {
+ margin-left: 3rem;
+}
+.centered-image {
+margin-left: 20rem;
+}
+}
+
+@media (max-width: 1560px) {
+.centered-image {
+margin-left: 25rem;
+}
+}
+
+@media (max-width: 1560px) {
+.centered-image {
+margin-left: 25rem;
+}
+}
+
+@media (max-width: 1480px) {
+.centered-image {
+margin-left: 25rem;
+}
+.text-container {
+  margin-left: 0rem;
+}
+}
+
+@media (max-width: 1290px) {
+.centered-image {
+margin-left: 25rem;
+margin-top: -2rem;
+}
+.text-container {
+  margin-left: -10rem;
+}
+}
+
+@media (max-width: 1090px) {
+.centered-image {
+margin-left: 20rem;
+margin-top: -2rem;
+}
+.text-container {
+  margin-left: -10rem;
+}
+}
+
+@media (max-width: 980px) {
+.centered-image {
+margin-left: 20rem;
+margin-top: -2rem;
+}
+.text-container {
+  margin-left: -15rem;
+}
+}
+
+@media (max-width: 900px) {
+.centered-image {
+display: none;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 100vh;
+  margin-left: -9rem;
+}
+}
+
+@media (max-width: 830px) {
+.centered-image {
+display: none;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 100vh;
+  margin-left: -11rem;
+}
+}
+
+@media (max-width: 750px) {
+.centered-image {
+display: none;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 100vh;
+  margin-left: -13.2rem;
+}
+}
+
+@media (max-width: 679px) {
+.centered-image {
+display: none;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 100vh;
+  margin-left: -15em;
+}
+}
+
+@media (max-width: 500px) {
+.centered-image {
+display: none;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 100vh;
+  margin-left: -17em;
+}
+#preloader {
+  height: 100vh;
+}
+
+.neon-text {
+  font-size: 5rem;
+}
+
+.neon-text span {
+  font-size: 5rem;
+  margin: 0 5px;
+  -webkit-text-stroke: 1.5px #ff0077;
+}
+}
+
+@media (max-width: 429px) {
+  body, html {
+    overflow: hidden;
+  }
+
+  .centered-image {
+    display: none;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
+    height: 100vh;
+    margin-left: -16rem;
+  }
+
+  #preloader {
+    height: 100vh;
+  }
+
+  .neon-text {
+    font-size: 4rem;
+  }
+
+  .neon-text span {
+    font-size: 4rem;
+    margin: 0 5px;
+    -webkit-text-stroke: 1.5px #ff0077;
+  }
+
+  .navbar .header-title h1 {
+    margin-left: -15px;
+  }
+}
+
+@media (max-width: 393px) {
+.centered-image {
+display: none;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 100vh;
+  margin-top: -3rem;
+  margin-left: -16rem;
+}
+#preloader {
+  height: 100vh;
+}
+
+.neon-text {
+  font-size: 4rem;
+}
+
+.neon-text span {
+  font-size: 4rem;
+  margin: 0 5px;
+  -webkit-text-stroke: 1.5px #ff0077;
+}
+.navbar .header-title h1 {
+  margin-left: -10px;
+}
+}
+
+/* Обо мне */
+
+/* Общие стили для секции */
+.intro.section {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  padding: 20px; /* Отступы вокруг содержимого */
+  box-sizing: border-box; /* Учитывает padding в общей ширине */
+  text-align: center; /* Центрирование текста */
+}
+
+/* Контейнер с содержимым */
+.intro-container {
+  max-width: 800px; /* Ограничение ширины контейнера */
+  width: 100%; /* Контейнер занимает всю доступную ширину */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Стили текста */
+.intro-container h1 {
+  font-size: 36px; /* Увеличен размер заголовка */
+  margin-bottom: 5px; /* Отступ снизу */
+}
+
+.intro-content p {
+  font-size: 18px; /* Увеличен размер текста */
+  margin-bottom: 15px; /* Отступ между абзацами */
+}
+
+.intro-content h2 {
+  font-size: 28px; /* Увеличен размер подзаголовка */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Адаптация для экранов шириной до 768px */
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 10px;
+  }
+
+  .intro-container h1 {
+    font-size: 28px; /* Увеличен размер заголовка для планшетов */
+  }
+
+  .intro-content h2 {
+    font-size: 22px; /* Увеличен размер подзаголовка для планшетов */
+  }
+
+  .intro-content p {
+    font-size: 16px; /* Увеличен размер текста для планшетов */
+  }
+}
+
+/* Адаптация для экранов шириной до 480px */
+@media (max-width: 480px) {
+  .intro-container {
+    padding: 5px;
+  }
+
+  .intro-container h1 {
+    font-size: 24px; /* Увеличен размер заголовка для мобильных */
+  }
+
+  .intro-content p {
+    font-size: 14px; /* Увеличен размер текста для мобильных */
+    margin-bottom: 10px;
+  }
+
+  .intro-content h2 {
+    font-size: 18px; /* Увеличен размер подзаголовка для мобильных */
+  }
+}
+
+@media (max-width: 393px) {
+  .intro-container {
+    padding: 10px;
+    margin-top: -60px;
+  }
+
+  .intro-container h1 {
+    font-size: 24px; /* Увеличен размер заголовка для мобильных */
+  }
+
+  .intro-content p {
+    font-size: 14px; /* Увеличен размер текста для мобильных */
+    margin-bottom: 10px;
+  }
+
+  .intro-content h2 {
+    font-size: 18px; /* Увеличен размер подзаголовка для мобильных */
+  }
+}
+
+/* Проекты */
+.projects h2 {
+  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Увеличиваем отступ до 15px */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Толщина линии */
+  background-color: #ff0077; /* Розовый цвет */
+  border-radius: 10px; /* Закругленные края */
+}
+
+.projects {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column; /* Вертикальное выравнивание */
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+}
+
+/* Сетка для карточек */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Сетка с автоматическим размещением */
+  gap: 20px; /* Расстояние между карточками */
+  justify-items: center; /* Центрирование карточек внутри сетки */
+}
+
+/* Стили для карточек */
+.project-card {
+  background: rgba(255, 255, 255, 0.1); /* Прозрачный фон */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  text-align: center; /* Центрирование текста внутри карточки */
+  width: 100%; /* Карточка занимает доступную ширину */
+  max-width: 300px; /* Максимальная ширина карточки */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Эффект при наведении */
+}
+
+
+/* Социальные сети */
+
+/* Стили для иконок социальных сетей */
+.social-networks-section {
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Центрирование иконок */
+  align-items: center;
+  flex-wrap: wrap; /* Позволяет иконкам переноситься при малом размере экрана */
+}
+
+/* Адаптация для экранов до 768px */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 15px; /* Меньше расстояния между иконками на маленьких экранах */
+  }
+
+  .social-icon {
+    font-size: 1.5rem; /* Уменьшаем размер иконок */
+    padding: 8px; /* Уменьшаем отступы вокруг иконок */
+  }
+}
+
+/* Адаптация для экранов до 480px */
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 10px; /* Еще меньше расстояния на очень маленьких экранах */
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Еще меньше размер иконок */
+    padding: 6px; /* Уменьшаем отступы еще больше */
+  }
+}
+
+@media (max-width: 428px) {
+    h2{
+      margin-left: -1.2rem;
+    }
+  .social-icons {
+    gap: 10px; /* Еще меньше расстояния на очень маленьких экранах */
+    margin-left: -1.2rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Еще меньше размер иконок */
+    padding: 6px; /* Уменьшаем отступы еще больше */
+  }
+}
+
+@media (max-width: 393px) {
+  .social-icons {
+    gap: 10px; /* Еще меньше расстояния на очень маленьких экранах */
+    margin-left: -1rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Еще меньше размер иконок */
+    padding: 6px; /* Уменьшаем отступы еще больше */
+  }
+}

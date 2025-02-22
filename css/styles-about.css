@@ -1,0 +1,243 @@
+/* Стиль для тела страницы */
+body {
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  height: 100vh; /* Занимаем всю высоту экрана */
+  margin: 0; /* Убираем отступы */
+  background-color: #0d0d0d; /* Темный фон */
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+p {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Основной контейнер */
+.about-container {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Стиль для заголовка */
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* Отступ снизу, чтобы освободить место для линии */
+}
+
+/* Подчеркивающая розовая линия */
+.intro h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ff0077; /* Розовая линия */
+  border-radius: 5px; /* Закругленные края линии */
+}
+
+/* Стиль для параграфа */
+.intro p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Серая линия сбоку параграфа */
+.intro p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px; /* Толщина линии */
+  height: 100%;
+  background-color: #fff; /* Серая линия */
+  border-radius: 5px; /* Закругленные края линии */
+}
+
+/* Введение */
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.intro p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Навыки */
+
+/* Стиль для заголовка секции Programming Skills */
+.skills h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* Отступ снизу, чтобы освободить место для линии */
+}
+
+/* Подчеркивающая розовая линия под заголовком */
+.skills h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ff0077; /* Розовая линия */
+  border-radius: 5px; /* Закругленные края линии */
+}
+
+/* Стиль для значков языков программирования */
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Подчеркивающая белая линия под значками */
+.skills-icons::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Расстояние от значков до линии */
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.skills-icons i {
+  font-size: 3rem;
+  margin: 10px;
+  color: #ff0077;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.skills-icons i:hover {
+  color: #ff77a9;
+  transform: scale(1.2);
+}
+
+/* Проекты */
+.projects h2 {
+  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Увеличиваем отступ до 15px */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Толщина линии */
+  background-color: #ff0077; /* Розовый цвет */
+  border-radius: 10px; /* Закругленные края */
+}
+
+.projects {
+  margin-top: 40px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Игры */
+.games {
+  margin-top: 40px;
+}
+.games-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.game-item img {
+  width: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.game-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Стиль для контейнера About Me */
+.about-container {
+  padding: 30px; /* Увеличиваем отступы */
+  color: #fff;
+  text-align: center;
+  background-color: rgba(85, 85, 85, 0); /* Чуть более прозрачный серый фон */
+  border-radius: 10px;
+  position: relative;
+  width: 700px; /* Сделали контейнер шире */
+  height: 500px; /* Сделали контейнер выше */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стиль для заголовка About Me */
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.intro p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+/* Скрытые секции */
+.section {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px); /* Смещение вниз */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Активная секция (плавное появление) */
+.section.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Возвращаем в нормальное положение */
+}
+
+/* Скрывающаяся секция (плавное исчезновение) */
+.section.hide {
+  opacity: 0;
+  transform: translateY(-20px); /* Смещение вверх при скрытии */
+  display: block; /* Оставляем блок видимым для анимации */
+}

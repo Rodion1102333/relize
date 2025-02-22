@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The site is the web-portfolio of the Russian-language web/dev Relize.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta property="og:image" content="https://i.postimg.cc/gJBBcsrr/favicon2.png"/>
+  <link rel="shortcut icon" type="image/png" href="assets/favicon2.png">
+  <title>Relize - /devfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/media-adaptation.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Загрузочный экран -->
+  <div id="preloader" class="neon-header">
+    <div class="neon-text" id="relize">
+      <span>R</span>
+      <span>E</span>
+      <span>L</span>
+      <span>I</span>
+      <span>Z</span>
+      <span>E</span>
+    </div>
+  </div>
+
+  <!-- Основной контент -->
+  <div id="main-content" style="opacity: 0; visibility: hidden;">
+    <header>
+      <div class="navbar">
+        <div class="header-title">
+          <h1>Developer/</h1>
+        </div>
+
+        <!-- Кнопка с тремя точками -->
+        <div id="menu-toggle" class="menu-toggle">⋮</div>
+
+        <!-- Скрытое меню -->
+        <div id="nav-menu-container"> <!-- Измените id на уникальное -->
+          <ul id="nav-menu"> <!-- Сохраните id для списка -->
+            <li><a href="#main" class="navbar-link"><i class="fas fa-home"></i></a></li>
+            <li><a href="about.html" class="navbar-link"><i class="fas fa-user"></i></a></li>
+            <li><a href="social-networks.html" class="navbar-link"><i class="fas fa-phone"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <div class="text-container">
+        <p class="greeting">- Hi.</p>
+        <div class="text3d-wrap-1">
+          <span class="text3d-1">I'm Relize</span>
+        </div>
+        <h2 class="sub-title">Web Developer</h2>
+        <p class="description">
+          I am an experienced Full Stack developer with a wide range of software development skills. My expertise includes programming languages C++, JavaScript, Node.js, React, C#, Java, and .NET.
+        </p>
+
+        <!-- Кнопки -->
+        <div class="buttons-container">
+          <a href="about.html" class="btn">About Me</a>
+          <a href="social-networks.html" class="btn">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="centered-image">
+        <img src="assets/logo.png" alt="Relize Logo">
+      </div>
+    </div>
+
+    <!-- Нижний бордер -->
+    <footer class="footer-border">
+      <p>© 2025 Lebed Rodion. All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/navmenu.js"></script>
+</body>
+</html>
