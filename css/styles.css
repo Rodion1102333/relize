@@ -32,7 +32,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 1s ease;
 }
 
 /* Кнопка с тремя точками */
@@ -330,7 +330,7 @@ body {
   font-family: 'Orbitron', sans-serif; /* Современный шрифт */
   font-size: 14px;
   z-index: 10;
-  transition: box-shadow 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход */
+  transition: box-shadow 1s ease, color 1s ease, text-shadow 1s ease; /* Плавный переход */
 }
 
 /* Эффект при наведении */
@@ -342,6 +342,7 @@ body {
 .footer-border:hover p {
   color: #ff4e7f; /* Более яркий розовый цвет текста */
   text-shadow: 0 0 10px rgba(255, 0, 119, 0.8), 0 0 20px rgba(255, 0, 119, 0.6); /* Чисто розовый ореол для текста */
+  transition: box-shadow 1s ease, color 1s ease, text-shadow 1s ease; /* Плавный переход */
 }
 
 /* Центрированное изображение */
