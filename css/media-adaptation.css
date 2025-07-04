@@ -430,7 +430,22 @@ display: none;
       margin-left: -1.2rem;
     }
   .social-icons {
-    gap: 10px; /* Еще меньше расстояния на очень маленьких экранах */
+    gap: 5px; /* Еще меньше расстояния на очень маленьких экранах */
+    margin-left: -1.2rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Еще меньше размер иконок */
+    padding: 6px; /* Уменьшаем отступы еще больше */
+  }
+}
+
+@media (max-width: 402px) {
+    h2{
+      margin-left: -1.2rem;
+    }
+  .social-icons {
+    gap: 11px; /* Еще меньше расстояния на очень маленьких экранах */
     margin-left: -1.2rem;
   }
 
