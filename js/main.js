@@ -1,11 +1,5 @@
-// ===========================
-// GLOBAL VARIABLES
-// ===========================
 let scrollTimeout;
 
-// ===========================
-// DOM CONTENT LOADED
-// ===========================
 document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initNavigation();
@@ -24,14 +18,12 @@ function initPreloader() {
   
   if (!preloader || !mainContent) return;
   
-  // Animate letters
   letters.forEach((letter, index) => {
     setTimeout(() => {
       letter.classList.add('active');
     }, index * 150);
   });
   
-  // Hide preloader and show content
   setTimeout(() => {
     preloader.classList.add('hidden');
     setTimeout(() => {
@@ -42,9 +34,6 @@ function initPreloader() {
   }, letters.length * 150 + 1000);
 }
 
-// ===========================
-// NAVIGATION
-// ===========================
 function initNavigation() {
   const navbar = document.querySelector('.navbar');
   const menuToggle = document.getElementById('menu-toggle');
@@ -53,12 +42,10 @@ function initNavigation() {
   
   if (!navbar) return;
   
-  // Scroll effect on navbar
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add scrolled class for shadow effect
     if (currentScroll > 50) {
       navbar.classList.add('scrolled');
     } else {
@@ -68,7 +55,6 @@ function initNavigation() {
     lastScroll = currentScroll;
   });
   
-  // Mobile menu toggle
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -77,7 +63,6 @@ function initNavigation() {
       document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
         menuToggle.classList.remove('active');
@@ -86,7 +71,6 @@ function initNavigation() {
       }
     });
     
-    // Close menu when clicking nav links
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -96,7 +80,6 @@ function initNavigation() {
     });
   }
   
-  // Smooth scroll for anchor links
   navLinks.forEach(link => {
     if (link.getAttribute('href').startsWith('#')) {
       link.addEventListener('click', (e) => {
@@ -118,9 +101,6 @@ function initNavigation() {
   });
 }
 
-// ===========================
-// SCROLL ANIMATIONS
-// ===========================
 function initScrollAnimations() {
   const observerOptions = {
     threshold: 0.1,
@@ -132,7 +112,6 @@ function initScrollAnimations() {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         
-        // Animate skill bars when visible
         if (entry.target.classList.contains('skill-card')) {
           const progressBar = entry.target.querySelector('.skill-progress');
           if (progressBar) {
@@ -144,18 +123,13 @@ function initScrollAnimations() {
     });
   }, observerOptions);
   
-  // Observe fade-in elements
   const fadeElements = document.querySelectorAll('.fade-in');
   fadeElements.forEach(el => observer.observe(el));
   
-  // Observe skill cards
   const skillCards = document.querySelectorAll('.skill-card');
   skillCards.forEach(card => observer.observe(card));
 }
 
-// ===========================
-// STAT COUNTERS
-// ===========================
 function initStatCounters() {
   const statNumbers = document.querySelectorAll('.stat-number');
   
@@ -186,7 +160,6 @@ function animateCounter(element, start, end, duration) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
     
-    // Easing function (ease-out)
     const easeOutQuart = 1 - Math.pow(1 - progress, 4);
     const current = Math.floor(start + (end - start) * easeOutQuart);
     
@@ -202,9 +175,6 @@ function animateCounter(element, start, end, duration) {
   requestAnimationFrame(update);
 }
 
-// ===========================
-// SKILL BARS ANIMATION
-// ===========================
 function initSkillBars() {
   const skillCards = document.querySelectorAll('.skill-card');
   
@@ -216,15 +186,11 @@ function initSkillBars() {
       const progress = progressBar.getAttribute('data-progress');
       progressBar.style.width = '0%';
       
-      // Set CSS custom property for animation
       card.style.setProperty('--progress-width', `${progress}%`);
     }
   });
 }
 
-// ===========================
-// SMOOTH SCROLL BEHAVIOR
-// ===========================
 function smoothScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
   
@@ -250,9 +216,6 @@ function smoothScroll() {
   });
 }
 
-// ===========================
-// MOUSE PARALLAX EFFECT (Optional)
-// ===========================
 function initParallax() {
   const heroImage = document.querySelector('.hero-image');
   
@@ -269,9 +232,6 @@ function initParallax() {
   });
 }
 
-// ===========================
-// PAGE TRANSITION (Optional)
-// ===========================
 function initPageTransitions() {
   const links = document.querySelectorAll('a:not([href^="#"]):not([target="_blank"])');
   
@@ -290,11 +250,7 @@ function initPageTransitions() {
   });
 }
 
-// ===========================
-// UTILITY FUNCTIONS
-// ===========================
 
-// Throttle function for scroll events
 function throttle(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -307,7 +263,6 @@ function throttle(func, wait) {
   };
 }
 
-// Debounce function for resize events
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -320,7 +275,6 @@ function debounce(func, wait) {
   };
 }
 
-// Check if element is in viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -331,11 +285,6 @@ function isInViewport(element) {
   );
 }
 
-// ===========================
-// PERFORMANCE OPTIMIZATIONS
-// ===========================
-
-// Lazy load images
 function initLazyLoading() {
   const images = document.querySelectorAll('img[data-src]');
   
@@ -353,13 +302,7 @@ function initLazyLoading() {
   images.forEach(img => imageObserver.observe(img));
 }
 
-// ===========================
-// ACCESSIBILITY
-// ===========================
-
-// Handle keyboard navigation
 document.addEventListener('keydown', (e) => {
-  // Close mobile menu on Escape
   if (e.key === 'Escape') {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -372,7 +315,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Focus trap for mobile menu
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll(
     'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
@@ -398,23 +340,14 @@ function trapFocus(element) {
   });
 }
 
-// ===========================
-// BROWSER COMPATIBILITY
-// ===========================
-
-// Check for reduced motion preference
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (prefersReducedMotion) {
-  // Disable animations
   document.documentElement.style.setProperty('--transition-fast', '0s');
   document.documentElement.style.setProperty('--transition-normal', '0s');
   document.documentElement.style.setProperty('--transition-slow', '0s');
 }
 
-// ===========================
-// CONSOLE MESSAGE
-// ===========================
 console.log('%c🚀 Relize Portfolio', 'font-size: 20px; font-weight: bold; color: #ff0077;');
 console.log('%cBuilt with ❤️ by Relize', 'font-size: 14px; color: #ff4e7f;');
 console.log('%cInterested in working together? Let\'s connect!', 'font-size: 12px; color: #a0a0a0;');
