@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The site is the web-portfolio of the Russian-language web/dev Relize.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <meta property="og:image" content="https://i.postimg.cc/gJBBcsrr/favicon2.png"/>
+  <meta name="description" content="Relize - Full Stack Developer Portfolio. Experienced in JavaScript, React, Node.js, C++, Java, and .NET">
+  <meta property="og:title" content="Relize - Full Stack Developer">
+  <meta property="og:description" content="Full Stack Developer with expertise in modern web technologies">
+  <meta property="og:image" content="assets/favicon3.png">
   <link rel="shortcut icon" type="image/png" href="assets/favicon3.png">
-  <title>Relize - /devfolio</title>
+  <title>Relize - Full Stack Developer</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/media-adaptation.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Загрузочный экран -->
-  <div id="preloader" class="neon-header">
-    <div class="neon-text" id="relize">
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="neon-text">
       <span>R</span>
       <span>E</span>
       <span>L</span>
@@ -27,58 +26,102 @@
     </div>
   </div>
 
-  <!-- Основной контент -->
-  <div id="main-content" style="opacity: 0; visibility: hidden;">
-    <header>
-      <div class="navbar">
-        <div class="header-title">
-          <h1>TEAMPICK / dev</h1>
+  <!-- Main Content -->
+  <div id="main-content" class="main-content">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <h1 class="brand-title">TEAMPICK <span class="brand-separator">/</span> <span class="brand-dev">dev</span></h1>
         </div>
 
-        <!-- Кнопка с тремя точками -->
-        <div id="menu-toggle" class="menu-toggle">⋮</div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <!-- Скрытое меню -->
-        <div id="nav-menu-container"> <!-- Измените id на уникальное -->
-          <ul id="nav-menu"> <!-- Сохраните id для списка -->
-            <li><a href="#main" class="navbar-link"><i class="fas fa-home"></i></a></li>
-            <li><a href="about.html" class="navbar-link"><i class="fas fa-user"></i></a></li>
-            <li><a href="social-networks.html" class="navbar-link"><i class="fas fa-phone"></i></a></li>
-          </ul>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i><span>About</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-animation"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-greeting">— Hi there.</p>
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">I'm Relize</h1>
+          </div>
+          <h2 class="hero-subtitle">Full Stack Developer</h2>
+          <p class="hero-description">
+            Experienced Full Stack developer with expertise in modern technologies.
+            Specializing in <strong>JavaScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, <strong>C++</strong>, <strong>Java</strong>, and <strong>.NET</strong>.
+            Building high-performance, scalable web applications.
+          </p>
+          <div class="hero-buttons">
+            <a href="about.html" class="btn btn-primary">
+              <span>About Me</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i class="fas fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-count="6">0</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="50">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="7">0</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="assets/logo2.png" alt="Relize Logo" class="logo-image">
+            <div class="image-glow"></div>
+          </div>
         </div>
       </div>
-    </header>
 
-    <div class="content-wrapper">
-      <div class="text-container">
-        <p class="greeting">- Hi.</p>
-        <div class="text3d-wrap-1">
-          <span class="text3d-1">I'm Relize</span>
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
         </div>
-        <h2 class="sub-title">Full-stack developer</h2>
-        <p class="description">
-          I am an experienced Full-stack developer with a wide range of software development skills. My expertise includes programming languages C++, JavaScript, Node.js, React, C#, Java, and .NET.
-        </p>
+        <p>Scroll Down</p>
+      </div>
+    </section>
 
-        <!-- Кнопки -->
-        <div class="buttons-container">
-          <a href="about.html" class="btn">About Me</a>
-          <a href="social-networks.html" class="btn">Contact Me</a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025 Lebed Rodion. All Rights Reserved</p>
+        <div class="footer-social">
+          <a href="https://discord.gg/jJJ8nCY7ZP" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="https://vk.com/bitchezmoneyweed" target="_blank" aria-label="VK"><i class="fab fa-vk"></i></a>
+          <a href="https://t.me/audios3lfdestroyer" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
         </div>
       </div>
-
-      <div class="centered-image">
-        <img src="assets/logo2.png" alt="Relize Logo">
-      </div>
-    </div>
-
-    <!-- Нижний бордер -->
-    <footer class="footer-border">
-      <p>© 2025 Lebed Rodion. All Rights Reserved</p>
     </footer>
   </div>
 
-  <script src="js/script.js"></script>
-  <script src="js/navmenu.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
