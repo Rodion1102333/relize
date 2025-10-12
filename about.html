@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relize - /devfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/styles-about.css">
-  <link rel="stylesheet" href="css/media-adaptation.css">
+  <meta name="description" content="About Relize - Full Stack Developer with expertise in modern web technologies">
   <link rel="shortcut icon" type="image/png" href="assets/favicon3.png">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>About - Relize</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Загрузочный экран -->
-  <div id="preloader" class="neon-header">
-    <div class="neon-text" id="relize">
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="neon-text">
       <span>R</span>
       <span>E</span>
       <span>L</span>
@@ -24,78 +23,154 @@
     </div>
   </div>
 
-  <!-- Основной контент -->
-  <div id="main-content" style="opacity: 0; visibility: hidden;">
-    <header>
-      <div class="navbar">
-        <div class="header-title">
-          <h1>TEAMPICK / dev</h1>
+  <!-- Main Content -->
+  <div id="main-content" class="main-content">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <h1 class="brand-title">TEAMPICK <span class="brand-separator">/</span> <span class="brand-dev">dev</span></h1>
         </div>
 
-        <!-- Кнопка с тремя точками -->
-        <div id="menu-toggle" class="menu-toggle">⋮</div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <!-- Скрытое меню -->
-        <div id="nav-menu-container"> <!-- Измените id на уникальное -->
-          <ul id="nav-menu"> <!-- Сохраните id для списка -->
-            <li><a href="index.html" class="navbar-link"><i class="fas fa-home"></i></a></li>
-            <li><a href="#about" class="navbar-link"><i class="fas fa-user"></i></a></li>
-            <li><a href="social-networks.html" class="navbar-link"><i class="fas fa-phone"></i></a></li>
-          </ul>
-        </div>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="#about" class="nav-link active"><i class="fas fa-user"></i><span>About</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
-    <!-- Контейнер с секциями -->
-    <section class="intro section">
-      <div class="intro-container">
-        <h1>Relize /devfolio</h1>
-        <div class="intro-content">
-          <p>
-            I am an experienced Full Stack developer with a wide range of software development skills.
-            My expertise includes programming languages C++, JavaScript, Node.js, React, C#, Java, and .NET.
-          </p>
-          <h2>Experience and Skills:</h2>
-          <p>
-            I have a deep understanding of programming principles and experience working with both frontend and backend.
-            My skills include developing high-performance web applications using modern technologies such as React and Node.js,
-            as well as creating cross-platform applications.
-          </p>
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Get To Know Me</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text fade-in">
+            <p class="lead-text">
+              I'm a passionate <strong>Full Stack Developer</strong> with extensive experience in building modern web applications.
+            </p>
+            <p>
+              My journey in software development has equipped me with a deep understanding of both frontend and backend technologies. I specialize in creating high-performance, scalable applications using cutting-edge frameworks and tools.
+            </p>
+            <p>
+              With expertise in <strong>C++</strong>, <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>React</strong>, <strong>C#</strong>, <strong>Java</strong>, and <strong>.NET</strong>, I bring comprehensive solutions to complex technical challenges.
+            </p>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="skills-section fade-in">
+            <h3 class="subsection-title">Technical Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <h4>JavaScript</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <h4>Node.js</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h4>React</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="92"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-java"></i>
+                </div>
+                <h4>Java</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h4>C++</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="88"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-rust"></i>
+                </div>
+                <h4>Rust</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects Section -->
+          <div class="projects-section fade-in">
+            <h3 class="subsection-title">Current Projects</h3>
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-header">
+                  <div class="project-icon">
+                    <i class="fas fa-gamepad"></i>
+                  </div>
+                  <span class="project-status">In Development</span>
+                </div>
+                <h4 class="project-title">TEAMPICK</h4>
+                <p class="project-description">
+                  Our mission is to create a space where traditional social network functionalities seamlessly intertwine with innovative gaming elements, thus shaping an entirely new format of digital interaction.
+                  This is more than just a social network or a gaming platform — it represents the future of online communication.
+                  The platform aims to redefine how users engage with each other by blending conventional social features with cutting-edge gaming mechanics, offering an unparalleled user experience that transcends traditional boundaries of digital interaction.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">#socialnetwork</span>
+                  <span class="tech-tag">#teampick</span>
+                  <span class="tech-tag">#chatngame</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-
-      <section class="skills section">
-        <h1>MAIN SKILLS</h1>
-        <div class="skills-icons">
-          <i class="fab fa-js-square"></i>
-          <i class="fab fa-node-js"></i>
-          <i class="fab fa-react"></i>
-          <i class="fab fa-java"></i>
-          <i class="fab fa-rust"></i>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025 Lebed Rodion. All Rights Reserved</p>
+        <div class="footer-social">
+          <a href="https://discord.gg/jJJ8nCY7ZP" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="https://vk.com/bitchezmoneyweed" target="_blank" aria-label="VK"><i class="fab fa-vk"></i></a>
+          <a href="https://t.me/audios3lfdestroyer" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
         </div>
-      </section>
-
-      <section class="projects section">
-        <h2>PROJECTS IN DEVELOPMENT</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h1>TEAMPICKS</h1>
-            <h1>Coming Soon</h1>
-            <p>A unique gaming social network created for gamers who want to interact and play together.</p>
-          </div>
-        </div>
-      </section>
-
-    <!-- Нижний бордер -->
-    <footer class="footer-border">
-      <p>© 2025 Lebed Rodion. All Rights Reserved</p>
+      </div>
     </footer>
   </div>
 
-  <script src="js/script.js"></script>
-  <script src="js/about-js.js"></script>
-  <script src="js/navmenu.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
