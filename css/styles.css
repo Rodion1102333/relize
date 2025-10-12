@@ -1,5 +1,5 @@
 
-/* === Smooth transitions globally applied === */
+/* === Smooth === */
 * {
   transition: all 0.4s ease-in-out !important;
   -webkit-transition: all 0.4s ease-in-out !important;
@@ -11,7 +11,6 @@
    CSS VARIABLES & RESET
    =========================== */
 :root {
-  /* Colors - Keeping your original neon pink theme */
   --primary-color: #ff0077;
   --primary-light: #ff4e7f;
   --primary-dark: #cc0060;
@@ -23,23 +22,19 @@
   --text-secondary: #e0e0e0;
   --text-muted: #a0a0a0;
 
-  /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 3rem;
   --spacing-xl: 4rem;
 
-  /* Typography */
   --font-primary: 'Montserrat', sans-serif;
   --font-display: 'Orbitron', sans-serif;
 
-  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 
-  /* Effects */
   --neon-glow: 0 0 5px rgba(255, 0, 119, 0.6), 0 0 15px rgba(255, 136, 204, 0.4);
   --neon-glow-strong: 0 0 10px rgba(255, 0, 119, 0.8), 0 0 20px rgba(255, 0, 119, 0.6), 0 0 30px rgba(255, 0, 119, 0.4);
   --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -1014,7 +1009,7 @@ ul {
    RESPONSIVE DESIGN
    =========================== */
 
-/* Tablets and below (768px) */
+/* (768px) */
 @media (max-width: 768px) {
   .navbar-container {
     padding: 1rem;
@@ -1097,7 +1092,7 @@ ul {
   }
 }
 
-/* Mobile devices (480px) */
+/* (480px) */
 @media (max-width: 480px) {
   html {
     font-size: 14px;
@@ -1174,7 +1169,7 @@ ul {
   }
 }
 
-/* Very small devices (360px) */
+/* (360px) */
 @media (max-width: 360px) {
   .neon-text {
     font-size: 2.5rem;
@@ -1190,7 +1185,7 @@ ul {
   }
 }
 
-/* Large screens optimization (1920px+) */
+/* (1920px+) */
 @media (min-width: 1920px) {
   .navbar-container,
   .hero-container,
@@ -1208,7 +1203,7 @@ ul {
   }
 }
 
-/* 2K screens and above (2560px+) */
+/* (2560px+) */
 @media (min-width: 2560px) {
   html {
     font-size: 18px;
